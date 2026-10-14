@@ -120,6 +120,9 @@ def metrics_for(ex):
     landing_split = {
         "merge_commit_landings": summary(landing_merge),
         "single_commit_landings": summary(landing_single),
+        # Squash and direct pushes: the author date is the landing time, to the minute.
+        "single_commit_landings_author_within_60s_of_committer": sum(
+            1 for m in landings if len(m["parents"]) == 1 and abs(m["ct"] - m["at"]) < 60),
     }
 
     # ---- Change failure rate and recovery (deploy = final release tag) --------

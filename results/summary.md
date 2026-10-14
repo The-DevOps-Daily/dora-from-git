@@ -1,6 +1,6 @@
 # Results
 
-Window: 52.14 weeks. Levels: 2024 DORA report, p. 13. Code: extract ce8e4cd646665feb, metrics 4261685f5886049a.
+Window: 52.14 weeks. Levels: 2024 DORA report, p. 13. Code: extract ce8e4cd646665feb, metrics e7fc520cd7e4f30b.
 
 ## go (rebase (Gerrit, linear), head e60b4c37fa34)
 

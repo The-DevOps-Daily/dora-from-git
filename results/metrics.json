@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-10-14T12:39:05+00:00",
+  "generated_at": "2026-10-14T12:42:40+00:00",
   "extract_code_hash": "ce8e4cd646665feb",
-  "metrics_code_hash": "4261685f5886049a",
+  "metrics_code_hash": "e7fc520cd7e4f30b",
   "hotfix_days": 7,
   "repos": [
     {
@@ -75,7 +75,8 @@
           "n": 3414,
           "median_h": 98.96,
           "p75_h": 358.75
-        }
+        },
+        "single_commit_landings_author_within_60s_of_committer": 0
       },
       "backport_commits": 463,
       "change_failure_rate": {
@@ -196,7 +197,8 @@
           "n": 151,
           "median_h": 0.0,
           "p75_h": 3.36
-        }
+        },
+        "single_commit_landings_author_within_60s_of_committer": 106
       },
       "backport_commits": 605,
       "change_failure_rate": {
@@ -314,7 +316,8 @@
           "n": 615,
           "median_h": 0.0,
           "p75_h": 0.0
-        }
+        },
+        "single_commit_landings_author_within_60s_of_committer": 612
       },
       "backport_commits": 47,
       "change_failure_rate": {
@@ -441,7 +444,8 @@
           "n": 3132,
           "median_h": 0.0,
           "p75_h": 0.0
-        }
+        },
+        "single_commit_landings_author_within_60s_of_committer": 3090
       },
       "backport_commits": 0,
       "change_failure_rate": {
