@@ -4,7 +4,7 @@
 ./run.sh
 ```
 
-Compute the four DORA metrics (deployment frequency, change lead time, change failure rate, recovery time) from plain Git history, once per definition, and see how far the definition alone moves the result. It needs `git`, `python3` (standard library only) and `bc`. A run takes about a minute on a Raspberry Pi 5 and clones about 150 MB.
+Compute the four DORA metrics (deployment frequency, change lead time, change failure rate, recovery time) from plain Git history, once per definition, and see how far the definition alone moves the result. It needs `git`, `python3` (standard library only) and `bc`. A run took 56 seconds on a Raspberry Pi 5, and the treeless clones of the four repos take 134 MB.
 
 The repos it measures, one per merge style, over 1 October 2025 to 1 October 2026:
 
