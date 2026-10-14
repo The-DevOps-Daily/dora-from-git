@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Cross-check stage 1 against plain git on random samples (seeded).
+"""Cross-check stage 1 against plain git on random samples (seeded), for every repo in repos.json.
 
 1. The side commits a merge brought in must equal
    `git rev-list --no-merges <first parent>..<merge>`.
@@ -13,6 +13,7 @@ import random
 import re
 import subprocess
 import sys
+from datetime import datetime
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -31,33 +32,32 @@ def load(repo):
 
 def main():
     rng = random.Random(SEED)
-    start = None
+    config = json.loads((ROOT / "repos.json").read_text())
+    start = int(datetime.fromisoformat(config["window"]["start"]).timestamp())
     lines, failures = [], 0
-    for repo in ("kubernetes", "prometheus"):
+    for repo in [r["name"] for r in config["repos"]]:
         ex = load(repo)
-        if start is None:
-            from datetime import datetime
-            start = int(datetime.fromisoformat(ex["window"]["start"]).timestamp())
         merges = [m for m in ex["landings"] if len(m["parents"]) > 1 and m["ct"] >= start]
+        sample = rng.sample(merges, min(25, len(merges)))
         ok = 0
-        for m in rng.sample(merges, 25):
+        for m in sample:
             want = set(git(repo, "rev-list", "--no-merges", f"{m['parents'][0]}..{m['sha']}").split())
-            got = {c["sha"] for c in m["brought"]}
-            ok += want == got
-        failures += 25 - ok
-        lines.append(f"{repo}: side commits match git rev-list for {ok} of 25 random merges")
-    for repo in ("kubernetes", "go", "uv"):
-        ex = load(repo)
+            ok += want == {c["sha"] for c in m["brought"]}
+        failures += len(sample) - ok
+        if sample:
+            lines.append(f"{repo}: side commits match git rev-list for {ok} of {len(sample)} random merges")
+
         finals = {t["name"]: t for t in ex["all_tags"] if not t["prerelease"]}
         pairs = [(c["sha"], d["name"]) for d in ex["deploys"] if not d["prerelease"]
                  for c in d["commits_vs_finals"] if len(c["parents"]) == 1]
+        sample = rng.sample(pairs, min(15, len(pairs)))
         ok = 0
-        for sha, name in rng.sample(pairs, 15):
+        for sha, name in sample:
             tags = [finals[t] for t in git(repo, "tag", "--contains", sha).split() if t in finals]
             first = min(tags, key=lambda t: (t["ts"], t["name"]))["name"] if tags else None
             ok += first == name
-        failures += 15 - ok
-        lines.append(f"{repo}: first final release matches git tag --contains for {ok} of 15 random commits")
+        failures += len(sample) - ok
+        lines.append(f"{repo}: first final release matches git tag --contains for {ok} of {len(sample)} random commits")
     text = "\n".join(lines) + "\n"
     (ROOT / "results" / "method-checks.txt").write_text(text)
     print(text, end="")

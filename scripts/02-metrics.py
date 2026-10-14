@@ -7,6 +7,7 @@ side by side, so the spread is visible. Output: results/metrics.json.
 import gzip
 import hashlib
 import json
+import math
 import statistics
 import sys
 from datetime import datetime, timezone
@@ -28,7 +29,7 @@ def pct(values, q):
     if not values:
         return None
     s = sorted(values)
-    k = max(0, min(len(s) - 1, int(round(q / 100 * len(s) + 0.5)) - 1))
+    k = max(0, min(len(s) - 1, math.ceil(q / 100 * len(s)) - 1))
     return s[k]
 
 
@@ -67,7 +68,7 @@ def metrics_for(ex):
         "release_days": len(release_days),
         "default_branch_landings": len(landings),
     }
-    df = {k: {"count": v, "per_week": round(v / weeks, 3)} for k, v in df.items()}
+    df = {k: {"count": v, "per_week": round(v / weeks, 4)} for k, v in df.items()}
 
     # ---- Change lead time (deploy = final release tag) ------------------------
     per_commit_author, per_commit_committer, per_commit_author_no_backports = [], [], []
@@ -134,7 +135,8 @@ def metrics_for(ex):
     hotfix_failed, hotfix_recovery = [], []
     for d in finals:
         line = sorted(by_line[(d["major"], d["minor"])], key=lambda t: (t["ts"], t["patch"]))
-        later = [t for t in line if t["patch"] > d["patch"] and t["ts"] >= d["ts"]]
+        # Only fixes released inside the window, like the revert rule.
+        later = [t for t in line if t["patch"] > d["patch"] and d["ts"] <= t["ts"] < end]
         if later and later[0]["ts"] - d["ts"] <= HOTFIX_DAYS * DAY:
             hotfix_failed.append(d["name"])
             hotfix_recovery.append(later[0]["ts"] - d["ts"])
@@ -161,14 +163,14 @@ def metrics_for(ex):
         return None
 
     reverted_failed, reverted_recovery = {}, []
-    no_target, target_not_in_earlier_release = 0, 0
+    unresolved_by_parser, target_not_in_earlier_release = 0, 0
     for d in finals:
         for c in d["commits_vs_finals"]:
             rv = revert_shas.get(c["sha"])
-            if not rv or len(c["parents"]) > 1:
-                continue  # a merge commit that only quotes a revert in its message
+            if not rv or len(c["parents"]) > 1 or not c["subject"].lower().startswith("revert"):
+                continue  # same candidates as rule 2: a non-merge commit whose subject starts with Revert
             if not rv["target_sha"] and not rv["target_cl"]:
-                no_target += 1
+                unresolved_by_parser += 1
                 continue
             target = resolve(rv)
             if target is None or target not in shipped_in or shipped_in[target]["ts"] >= d["ts"]:
@@ -189,7 +191,7 @@ def metrics_for(ex):
                            "rate": round(len(has_revert) / n, 3) if n else None},
         "shipped_change_later_reverted": {"failed": len(reverted_failed), "of": n,
                                           "rate": round(len(reverted_failed) / n, 3) if n else None,
-                                          "reverts_naming_no_commit": no_target,
+                                          "reverts_unresolved_by_parser": unresolved_by_parser,
                                           "reverts_of_unreleased_or_older_changes": target_not_in_earlier_release},
     }
     recovery = {

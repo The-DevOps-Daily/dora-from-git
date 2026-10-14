@@ -1,6 +1,6 @@
 {
   "source": "2024 Accelerate State of DevOps report, v. 2024.3, p. 13",
-  "metrics_code_hash": "e7fc520cd7e4f30b",
+  "metrics_code_hash": "db735e108ef3307f",
   "repos": [
     {
       "repo": "go",
@@ -8,22 +8,22 @@
       "df": {
         "every_tag": {
           "count": 36,
-          "per_week": 0.69,
+          "per_week": 0.6904,
           "level": "Medium"
         },
         "final_tags": {
           "count": 30,
-          "per_week": 0.575,
+          "per_week": 0.5753,
           "level": "Medium"
         },
         "release_days": {
           "count": 15,
-          "per_week": 0.288,
+          "per_week": 0.2877,
           "level": "Medium"
         },
         "default_branch_landings": {
           "count": 3422,
-          "per_week": 65.627,
+          "per_week": 65.6274,
           "level": "Elite"
         }
       },
@@ -86,7 +86,7 @@
           "failed": 1,
           "of": 30,
           "rate": 0.033,
-          "reverts_naming_no_commit": 7,
+          "reverts_unresolved_by_parser": 0,
           "reverts_of_unreleased_or_older_changes": 38
         }
       },
@@ -94,7 +94,7 @@
         "hotfix_within_7_days": {
           "n": 4,
           "median_h": 144.13,
-          "p75_h": 146.97
+          "p75_h": 146.95
         },
         "shipped_change_later_reverted": {
           "n": 1,
@@ -117,22 +117,22 @@
       "df": {
         "every_tag": {
           "count": 63,
-          "per_week": 1.208,
+          "per_week": 1.2082,
           "level": "High"
         },
         "final_tags": {
           "count": 42,
-          "per_week": 0.805,
+          "per_week": 0.8055,
           "level": "Medium"
         },
         "release_days": {
           "count": 15,
-          "per_week": 0.288,
+          "per_week": 0.2877,
           "level": "Medium"
         },
         "default_branch_landings": {
           "count": 3286,
-          "per_week": 63.019,
+          "per_week": 63.0192,
           "level": "Elite"
         }
       },
@@ -140,7 +140,7 @@
         "commit_author_date_first_tag": {
           "n": 6812,
           "median_h": 620.98,
-          "p75_h": 1223.53,
+          "p75_h": 1223.31,
           "level": "Medium"
         },
         "commit_author_date": {
@@ -195,7 +195,7 @@
           "failed": 1,
           "of": 42,
           "rate": 0.024,
-          "reverts_naming_no_commit": 25,
+          "reverts_unresolved_by_parser": 21,
           "reverts_of_unreleased_or_older_changes": 34
         }
       },
@@ -228,17 +228,17 @@
       "df": {
         "every_tag": {
           "count": 39,
-          "per_week": 0.748,
+          "per_week": 0.7479,
           "level": "Medium"
         },
         "final_tags": {
           "count": 26,
-          "per_week": 0.499,
+          "per_week": 0.4986,
           "level": "Medium"
         },
         "release_days": {
           "count": 24,
-          "per_week": 0.46,
+          "per_week": 0.4603,
           "level": "Medium"
         },
         "default_branch_landings": {
@@ -306,7 +306,7 @@
           "failed": 1,
           "of": 26,
           "rate": 0.038,
-          "reverts_naming_no_commit": 4,
+          "reverts_unresolved_by_parser": 3,
           "reverts_of_unreleased_or_older_changes": 5
         }
       },
@@ -347,12 +347,12 @@
         },
         "release_days": {
           "count": 93,
-          "per_week": 1.784,
+          "per_week": 1.7836,
           "level": "High"
         },
         "default_branch_landings": {
           "count": 3132,
-          "per_week": 60.066,
+          "per_week": 60.0658,
           "level": "Elite"
         }
       },
@@ -402,9 +402,9 @@
       },
       "cfr": {
         "hotfix_within_7_days": {
-          "failed": 88,
+          "failed": 87,
           "of": 101,
-          "rate": 0.871
+          "rate": 0.861
         },
         "ships_a_revert": {
           "failed": 20,
@@ -415,15 +415,15 @@
           "failed": 5,
           "of": 101,
           "rate": 0.05,
-          "reverts_naming_no_commit": 22,
+          "reverts_unresolved_by_parser": 19,
           "reverts_of_unreleased_or_older_changes": 0
         }
       },
       "recovery": {
         "hotfix_within_7_days": {
-          "n": 88,
-          "median_h": 70.33,
-          "p75_h": 105.0
+          "n": 87,
+          "median_h": 70.88,
+          "p75_h": 107.55
         },
         "shipped_change_later_reverted": {
           "n": 5,

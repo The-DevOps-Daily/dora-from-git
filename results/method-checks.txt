@@ -1,5 +1,7 @@
 kubernetes: side commits match git rev-list for 25 of 25 random merges
-prometheus: side commits match git rev-list for 25 of 25 random merges
 kubernetes: first final release matches git tag --contains for 15 of 15 random commits
-go: first final release matches git tag --contains for 15 of 15 random commits
 uv: first final release matches git tag --contains for 15 of 15 random commits
+go: side commits match git rev-list for 8 of 8 random merges
+go: first final release matches git tag --contains for 15 of 15 random commits
+prometheus: side commits match git rev-list for 25 of 25 random merges
+prometheus: first final release matches git tag --contains for 15 of 15 random commits

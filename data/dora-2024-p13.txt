@@ -1,0 +1,61 @@
+describe software delivery throughput.
+This factor measures the speed of
+making updates of any kind, normal
+changes and changes in response
+to a failure.
+
+
+
+
+                                         12                     Software delivery performance
+v. 2024.3
+Performance levels
+
+Each year we ask survey respondents                In our analysis of software delivery
+about the software delivery performance            performance, four clusters of responses
+of the primary application or service they         emerged. We do not set these levels in
+work on. We analyze their answers using            advance, rather we let them emerge
+cluster analysis, which is a statistical           from the survey responses. This gives
+method that identifies responses that are          us a way to see a snapshot of software
+similar to one another but distinct from           delivery performance across all
+other groups of responses.                         respondents each year.
+
+We performed the cluster analysis on the           Four distinct clusters emerged from the
+original four software delivery metrics to         data this year, as shown below.
+remain consistent with previous years'
+cluster analyses.
+
+
+ Performance       Change lead   Deployment          Change fail Failed           Percentage of
+ level             time          frequency           rate        deployment       respondents*
+                                                                 recovery time
+
+   Elite            Less than    On demand            5%         Less than         19%
+                    one day      (multiple                       one hour          (18-20%)
+                                 deploys per day)
+
+
+   High            Between one   Between once         20%        Less than         22%
+                   day and one   per day and                     one day           (21-23%)
+                   week          once per week
+
+
+   Medium          Between one   Between once         10%        Less than         35%
+                   week and      per week and                    one day           (33-36%)
+                   one month     once per month
+
+
+   Low             Between one   Between once         40%        Between one       25%
+                   month and     per month and                   week and          (23-26%)
+                   six months    once every six                  one month
+                                 months
+
+
+*89% uncertainty interval
+
+                                              13                       Software delivery performance
+v. 2024.3
+Throughput or stability?                                                        There may not be a universal answer
+                                                                                to this question. It depends on the
+Within all four clusters, throughput                                            application or service being considered,
+and stability are correlated. This                                              the goals of the team working on that

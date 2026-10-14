@@ -82,7 +82,17 @@ def landings_with_side_commits(repo, branch, since, until):
     graph = {c["sha"]: c for c in rev_list(repo, branch, f"--since={since - YEAR}")}
     firsts = rev_list(repo, "--first-parent", "--reverse", branch, f"--since={since}", f"--until={until}")
     mainline = {m["sha"] for m in firsts}
+    # Everything already on the branch before the first landing counts as
+    # landed, so the first merge in the slice does not absorb older history.
     assigned = set()
+    if firsts:
+        stack = list(firsts[0]["parents"][:1])
+        while stack:
+            sha = stack.pop()
+            if sha in assigned or sha not in graph:
+                continue
+            assigned.add(sha)
+            stack.extend(graph[sha]["parents"])
     out = []
     for m in firsts:
         brought = []
@@ -109,8 +119,8 @@ def read_reverts(repo, since):
         if not rec:
             continue
         sha, at, ct, subject, body = rec.split(SEP, 4)
-        target_sha = re.search(r"reverts commit ([0-9a-f]{7,40})", body)
-        target_cl = re.search(r"reverts CL (\d+)", body)
+        target_sha = re.search(r"reverts? commit ([0-9a-f]{7,40})", body, re.I)
+        target_cl = re.search(r"reverts? CL (\d+)", body, re.I)
         reverts.append({
             "sha": sha, "at": int(at), "ct": int(ct), "subject": subject,
             "target_sha": target_sha.group(1) if target_sha else None,

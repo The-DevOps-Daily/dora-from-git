@@ -1,13 +1,13 @@
 # Results
 
-Window: 52.14 weeks. Levels: 2024 DORA report, p. 13. Code: extract ce8e4cd646665feb, metrics e7fc520cd7e4f30b.
+Window: 52.14 weeks. Levels: 2024 DORA report, p. 13. Code: extract bc4746170d6ebaa0, metrics db735e108ef3307f.
 
 ## go (rebase (Gerrit, linear), head e60b4c37fa34)
 
 | Deploy means | Deploys | Per week | Level |
 | --- | ---: | ---: | --- |
 | every tag (release candidates too) | 36 | 0.69 | Medium |
-| every final release tag | 30 | 0.57 | Medium |
+| every final release tag | 30 | 0.58 | Medium |
 | days with a final release | 15 | 0.29 | Medium |
 | every landing on the default branch | 3422 | 65.63 | Elite |
 
@@ -31,7 +31,7 @@ Recovery time (median): next patch on the same line within 7 days: 6.0 d (n=4), 
 
 Deployment frequency levels reached: Elite, Medium. Lead time levels reached: High, Low.
 
-## kubernetes (merge commits, head 1c99cdec1bfc)
+## kubernetes (merge commits, head 259522789953)
 
 | Deploy means | Deploys | Per week | Level |
 | --- | ---: | ---: | --- |
@@ -110,11 +110,11 @@ Deployment frequency levels reached: Elite, Medium. Lead time levels reached: El
 
 | A release failed if | Failed | Of | Rate |
 | --- | ---: | ---: | ---: |
-| next patch on the same line within 7 days | 88 | 101 | 87.1% |
+| next patch on the same line within 7 days | 87 | 101 | 86.1% |
 | release ships any revert commit | 20 | 101 | 19.8% |
 | a later release reverts a change it shipped | 5 | 101 | 5.0% |
 
-Recovery time (median): next patch on the same line within 7 days: 2.9 d (n=88), a later release reverts a change it shipped: 34.5 h (n=5)
+Recovery time (median): next patch on the same line within 7 days: 3.0 d (n=87), a later release reverts a change it shipped: 34.5 h (n=5)
 
 Deployment frequency levels reached: Elite, High. Lead time levels reached: Elite, High.
 

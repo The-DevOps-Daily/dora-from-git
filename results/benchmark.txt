@@ -1,0 +1,12 @@
+date: 2026-10-14T12:53:04Z
+machine: Raspberry Pi 4 Model B Rev 1.1
+kernel: Linux 6.12.62+rpt-rpi-v8
+git: git version 2.39.5
+python: Python 3.11.2
+run.sh wall time: 137.3 s
+clone sizes:
+  36M	data/repos/go
+  73M	data/repos/kubernetes
+  12M	data/repos/prometheus
+  13M	data/repos/uv
+  total: 132M
