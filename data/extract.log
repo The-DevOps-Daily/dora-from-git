@@ -1,8 +1,0 @@
-kubernetes: 63 tags in window (42 final), 3286 landings on master, 186 reverts since a year before -> results/extract/kubernetes.json
-uv: 101 tags in window (101 final), 3132 landings on main, 78 reverts since a year before -> results/extract/uv.json
-go: 36 tags in window (30 final), 3422 landings on master, 75 reverts since a year before -> results/extract/go.json
-prometheus: 39 tags in window (26 final), 1241 landings on main, 24 reverts since a year before -> results/extract/prometheus.json
-
-real	0m34.389s
-user	0m26.056s
-sys	0m10.048s
