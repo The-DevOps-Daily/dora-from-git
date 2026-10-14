@@ -1,0 +1,6 @@
+{
+  "kubernetes": {"url": "https://github.com/kubernetes/kubernetes.git", "branch": "master", "head": "1c99cdec1bfc415a26a4897e9ce9ddd5cad38755", "commits_on_branch": 142101, "tags": 1251, "fetched_at": "2026-10-14T12:37:58Z"},
+  "uv": {"url": "https://github.com/astral-sh/uv.git", "branch": "main", "head": "a79aac95dc8f1d79e4396fdcb262d22c520cc1f6", "commits_on_branch": 10987, "tags": 324, "fetched_at": "2026-10-14T12:38:00Z"},
+  "go": {"url": "https://go.googlesource.com/go", "branch": "master", "head": "e60b4c37fa344513cdecfffe6efc3ca48c4a6cb2", "commits_on_branch": 68073, "tags": 498, "fetched_at": "2026-10-14T12:38:02Z"},
+  "prometheus": {"url": "https://github.com/prometheus/prometheus.git", "branch": "main", "head": "6f01fa9c5ffcbe71a5ed9e4132d9bb60c4aae85a", "commits_on_branch": 18919, "tags": 560, "fetched_at": "2026-10-14T12:38:04Z"}
+}

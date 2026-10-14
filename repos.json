@@ -1,0 +1,36 @@
+{
+  "window": {
+    "start": "2025-10-01T00:00:00Z",
+    "end": "2026-10-01T00:00:00Z"
+  },
+  "repos": [
+    {
+      "name": "kubernetes",
+      "url": "https://github.com/kubernetes/kubernetes.git",
+      "branch": "master",
+      "merge_style": "merge commits",
+      "tag_pattern": "^v(\\d+)\\.(\\d+)\\.(\\d+)(-(?:alpha|beta|rc)\\.\\d+)?$"
+    },
+    {
+      "name": "uv",
+      "url": "https://github.com/astral-sh/uv.git",
+      "branch": "main",
+      "merge_style": "squash",
+      "tag_pattern": "^(\\d+)\\.(\\d+)\\.(\\d+)((?:-|\\.)?(?:rc|alpha|beta|a|b)\\.?\\d+)?$"
+    },
+    {
+      "name": "go",
+      "url": "https://go.googlesource.com/go",
+      "branch": "master",
+      "merge_style": "rebase (Gerrit, linear)",
+      "tag_pattern": "^go(\\d+)\\.(\\d+)(?:\\.(\\d+))?((?:rc|beta)\\d+)?$"
+    },
+    {
+      "name": "prometheus",
+      "url": "https://github.com/prometheus/prometheus.git",
+      "branch": "main",
+      "merge_style": "mixed: merge commits and squash",
+      "tag_pattern": "^v([1-9]\\d*)\\.(\\d+)\\.(\\d+)(-rc\\.\\d+)?$"
+    }
+  ]
+}

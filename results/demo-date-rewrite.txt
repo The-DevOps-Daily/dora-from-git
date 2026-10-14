@@ -1,0 +1,14 @@
+merge commit:
+  feature: part 2 | author 2026-09-09T15:00:00+00:00 | committer 2026-09-09T15:00:00+00:00
+  feature: part 1 | author 2026-09-07T10:00:00+00:00 | committer 2026-09-07T10:00:00+00:00
+  lead time from author date 102.0 h, from committer date 102.0 h
+
+squash:
+  feature (squashed) | author 2026-09-11T16:00:00+00:00 | committer 2026-09-11T16:00:00+00:00
+  lead time from author date   0.0 h, from committer date   0.0 h
+
+rebase:
+  feature: part 2 | author 2026-09-09T15:00:00+00:00 | committer 2026-09-11T16:00:00+00:00
+  feature: part 1 | author 2026-09-07T10:00:00+00:00 | committer 2026-09-11T16:00:00+00:00
+  lead time from author date 102.0 h, from committer date   0.0 h
+
