@@ -1,116 +1,7 @@
 {
   "source": "2024 Accelerate State of DevOps report, v. 2024.3, p. 13",
-  "metrics_code_hash": "db735e108ef3307f",
+  "metrics_code_hash": "e46183eea20f7f65",
   "repos": [
-    {
-      "repo": "go",
-      "merge_style": "rebase (Gerrit, linear)",
-      "df": {
-        "every_tag": {
-          "count": 36,
-          "per_week": 0.6904,
-          "level": "Medium"
-        },
-        "final_tags": {
-          "count": 30,
-          "per_week": 0.5753,
-          "level": "Medium"
-        },
-        "release_days": {
-          "count": 15,
-          "per_week": 0.2877,
-          "level": "Medium"
-        },
-        "default_branch_landings": {
-          "count": 3422,
-          "per_week": 65.6274,
-          "level": "Elite"
-        }
-      },
-      "lt": {
-        "commit_author_date_first_tag": {
-          "n": 3878,
-          "median_h": 1657.6,
-          "p75_h": 2828.74,
-          "level": "Low"
-        },
-        "commit_author_date": {
-          "n": 3878,
-          "median_h": 3061.19,
-          "p75_h": 4204.18,
-          "level": "Low"
-        },
-        "commit_committer_date": {
-          "n": 3878,
-          "median_h": 2687.18,
-          "p75_h": 3817.26,
-          "level": "Low"
-        },
-        "commit_author_date_without_backports": {
-          "n": 3415,
-          "median_h": 3312.87,
-          "p75_h": 4386.93,
-          "level": "Low"
-        },
-        "change_from_landing": {
-          "n": 3521,
-          "median_h": 2639.48,
-          "p75_h": 3688.76,
-          "level": "Low"
-        },
-        "change_from_first_commit": {
-          "n": 3521,
-          "median_h": 3008.21,
-          "p75_h": 4137.63,
-          "level": "Low"
-        },
-        "landing_is_deploy": {
-          "n": 3422,
-          "median_h": 99.12,
-          "p75_h": 360.08,
-          "level": "High"
-        }
-      },
-      "cfr": {
-        "hotfix_within_7_days": {
-          "failed": 4,
-          "of": 30,
-          "rate": 0.133
-        },
-        "ships_a_revert": {
-          "failed": 2,
-          "of": 30,
-          "rate": 0.067
-        },
-        "shipped_change_later_reverted": {
-          "failed": 1,
-          "of": 30,
-          "rate": 0.033,
-          "reverts_unresolved_by_parser": 0,
-          "reverts_of_unreleased_or_older_changes": 38
-        }
-      },
-      "recovery": {
-        "hotfix_within_7_days": {
-          "n": 4,
-          "median_h": 144.13,
-          "p75_h": 146.95
-        },
-        "shipped_change_later_reverted": {
-          "n": 1,
-          "median_h": 4557.29,
-          "p75_h": 4557.29
-        }
-      },
-      "df_levels_reached": [
-        "Elite",
-        "Medium"
-      ],
-      "lt_levels_reached": [
-        "High",
-        "Low"
-      ]
-    },
     {
       "repo": "kubernetes",
       "merge_style": "merge commits",
@@ -223,115 +114,6 @@
       ]
     },
     {
-      "repo": "prometheus",
-      "merge_style": "mixed: merge commits and squash",
-      "df": {
-        "every_tag": {
-          "count": 39,
-          "per_week": 0.7479,
-          "level": "Medium"
-        },
-        "final_tags": {
-          "count": 26,
-          "per_week": 0.4986,
-          "level": "Medium"
-        },
-        "release_days": {
-          "count": 24,
-          "per_week": 0.4603,
-          "level": "Medium"
-        },
-        "default_branch_landings": {
-          "count": 1241,
-          "per_week": 23.8,
-          "level": "Elite"
-        }
-      },
-      "lt": {
-        "commit_author_date_first_tag": {
-          "n": 1936,
-          "median_h": 766.1,
-          "p75_h": 1087.81,
-          "level": "Low"
-        },
-        "commit_author_date": {
-          "n": 1936,
-          "median_h": 960.73,
-          "p75_h": 1298.57,
-          "level": "Low"
-        },
-        "commit_committer_date": {
-          "n": 1936,
-          "median_h": 935.53,
-          "p75_h": 1217.11,
-          "level": "Low"
-        },
-        "commit_author_date_without_backports": {
-          "n": 1889,
-          "median_h": 971.32,
-          "p75_h": 1301.82,
-          "level": "Low"
-        },
-        "change_from_landing": {
-          "n": 1305,
-          "median_h": 873.43,
-          "p75_h": 1131.23,
-          "level": "Low"
-        },
-        "change_from_first_commit": {
-          "n": 1305,
-          "median_h": 949.68,
-          "p75_h": 1232.39,
-          "level": "Low"
-        },
-        "landing_is_deploy": {
-          "n": 1241,
-          "median_h": 0.34,
-          "p75_h": 48.7,
-          "level": "Elite"
-        }
-      },
-      "cfr": {
-        "hotfix_within_7_days": {
-          "failed": 5,
-          "of": 26,
-          "rate": 0.192
-        },
-        "ships_a_revert": {
-          "failed": 7,
-          "of": 26,
-          "rate": 0.269
-        },
-        "shipped_change_later_reverted": {
-          "failed": 1,
-          "of": 26,
-          "rate": 0.038,
-          "reverts_unresolved_by_parser": 3,
-          "reverts_of_unreleased_or_older_changes": 5
-        }
-      },
-      "recovery": {
-        "hotfix_within_7_days": {
-          "n": 5,
-          "median_h": 124.56,
-          "p75_h": 126.15
-        },
-        "shipped_change_later_reverted": {
-          "n": 1,
-          "median_h": 357.13,
-          "p75_h": 357.13
-        }
-      },
-      "df_levels_reached": [
-        "Elite",
-        "Medium"
-      ],
-      "lt_levels_reached": [
-        "Elite",
-        "Low"
-      ]
-    },
-    {
       "repo": "uv",
       "merge_style": "squash",
       "df": {
@@ -438,6 +220,224 @@
       "lt_levels_reached": [
         "Elite",
         "High"
+      ]
+    },
+    {
+      "repo": "go",
+      "merge_style": "rebase (Gerrit, linear)",
+      "df": {
+        "every_tag": {
+          "count": 36,
+          "per_week": 0.6904,
+          "level": "Medium"
+        },
+        "final_tags": {
+          "count": 30,
+          "per_week": 0.5753,
+          "level": "Medium"
+        },
+        "release_days": {
+          "count": 15,
+          "per_week": 0.2877,
+          "level": "Medium"
+        },
+        "default_branch_landings": {
+          "count": 3422,
+          "per_week": 65.6274,
+          "level": "Elite"
+        }
+      },
+      "lt": {
+        "commit_author_date_first_tag": {
+          "n": 3878,
+          "median_h": 1657.6,
+          "p75_h": 2828.74,
+          "level": "Low"
+        },
+        "commit_author_date": {
+          "n": 3878,
+          "median_h": 3061.19,
+          "p75_h": 4204.18,
+          "level": "Low"
+        },
+        "commit_committer_date": {
+          "n": 3878,
+          "median_h": 2687.18,
+          "p75_h": 3817.26,
+          "level": "Low"
+        },
+        "commit_author_date_without_backports": {
+          "n": 3415,
+          "median_h": 3312.87,
+          "p75_h": 4386.93,
+          "level": "Low"
+        },
+        "change_from_landing": {
+          "n": 3521,
+          "median_h": 2639.48,
+          "p75_h": 3688.76,
+          "level": "Low"
+        },
+        "change_from_first_commit": {
+          "n": 3521,
+          "median_h": 3008.21,
+          "p75_h": 4137.63,
+          "level": "Low"
+        },
+        "landing_is_deploy": {
+          "n": 3422,
+          "median_h": 99.12,
+          "p75_h": 360.08,
+          "level": "High"
+        }
+      },
+      "cfr": {
+        "hotfix_within_7_days": {
+          "failed": 4,
+          "of": 30,
+          "rate": 0.133
+        },
+        "ships_a_revert": {
+          "failed": 2,
+          "of": 30,
+          "rate": 0.067
+        },
+        "shipped_change_later_reverted": {
+          "failed": 1,
+          "of": 30,
+          "rate": 0.033,
+          "reverts_unresolved_by_parser": 0,
+          "reverts_of_unreleased_or_older_changes": 38
+        }
+      },
+      "recovery": {
+        "hotfix_within_7_days": {
+          "n": 4,
+          "median_h": 144.13,
+          "p75_h": 146.95
+        },
+        "shipped_change_later_reverted": {
+          "n": 1,
+          "median_h": 4557.29,
+          "p75_h": 4557.29
+        }
+      },
+      "df_levels_reached": [
+        "Elite",
+        "Medium"
+      ],
+      "lt_levels_reached": [
+        "High",
+        "Low"
+      ]
+    },
+    {
+      "repo": "prometheus",
+      "merge_style": "mixed: merge commits and squash",
+      "df": {
+        "every_tag": {
+          "count": 39,
+          "per_week": 0.7479,
+          "level": "Medium"
+        },
+        "final_tags": {
+          "count": 26,
+          "per_week": 0.4986,
+          "level": "Medium"
+        },
+        "release_days": {
+          "count": 24,
+          "per_week": 0.4603,
+          "level": "Medium"
+        },
+        "default_branch_landings": {
+          "count": 1241,
+          "per_week": 23.8,
+          "level": "Elite"
+        }
+      },
+      "lt": {
+        "commit_author_date_first_tag": {
+          "n": 1936,
+          "median_h": 766.1,
+          "p75_h": 1087.81,
+          "level": "Low"
+        },
+        "commit_author_date": {
+          "n": 1936,
+          "median_h": 960.73,
+          "p75_h": 1298.57,
+          "level": "Low"
+        },
+        "commit_committer_date": {
+          "n": 1936,
+          "median_h": 935.53,
+          "p75_h": 1217.11,
+          "level": "Low"
+        },
+        "commit_author_date_without_backports": {
+          "n": 1889,
+          "median_h": 971.32,
+          "p75_h": 1301.82,
+          "level": "Low"
+        },
+        "change_from_landing": {
+          "n": 1305,
+          "median_h": 873.43,
+          "p75_h": 1131.23,
+          "level": "Low"
+        },
+        "change_from_first_commit": {
+          "n": 1305,
+          "median_h": 949.68,
+          "p75_h": 1232.39,
+          "level": "Low"
+        },
+        "landing_is_deploy": {
+          "n": 1241,
+          "median_h": 0.34,
+          "p75_h": 48.7,
+          "level": "Elite"
+        }
+      },
+      "cfr": {
+        "hotfix_within_7_days": {
+          "failed": 5,
+          "of": 26,
+          "rate": 0.192
+        },
+        "ships_a_revert": {
+          "failed": 7,
+          "of": 26,
+          "rate": 0.269
+        },
+        "shipped_change_later_reverted": {
+          "failed": 1,
+          "of": 26,
+          "rate": 0.038,
+          "reverts_unresolved_by_parser": 3,
+          "reverts_of_unreleased_or_older_changes": 5
+        }
+      },
+      "recovery": {
+        "hotfix_within_7_days": {
+          "n": 5,
+          "median_h": 124.56,
+          "p75_h": 126.15
+        },
+        "shipped_change_later_reverted": {
+          "n": 1,
+          "median_h": 357.13,
+          "p75_h": 357.13
+        }
+      },
+      "df_levels_reached": [
+        "Elite",
+        "Medium"
+      ],
+      "lt_levels_reached": [
+        "Elite",
+        "Low"
       ]
     }
   ]

@@ -44,7 +44,8 @@ def read_tags(repo, pattern):
         m = rx.match(name)
         if not m:
             continue
-        nums = [int(g) if g else 0 for g in m.groups()[:3]]
+        groups = m.groups() + (None,) * (4 - len(m.groups()))  # the prerelease group is optional
+        nums = [int(g) if g else 0 for g in groups[:3]]
         tags.append({
             "name": name,
             "annotated": otype == "tag",
@@ -52,7 +53,7 @@ def read_tags(repo, pattern):
             # Annotated: the tagger date. Lightweight: the tagged commit's committer date.
             "ts": iso_to_ts(created),
             "major": nums[0], "minor": nums[1], "patch": nums[2],
-            "prerelease": bool(m.groups()[3]),
+            "prerelease": bool(groups[3]),
         })
     tags.sort(key=lambda t: (t["ts"], t["name"]))
     return tags

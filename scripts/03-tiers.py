@@ -25,7 +25,7 @@ LT_LABELS = {
     "commit_author_date": "commit author date to final release",
     "commit_committer_date": "commit committer date to final release",
     "commit_author_date_without_backports": "commit author date to final release, backports left out",
-    "change_from_landing": "landing on default branch to final release (per change)",
+    "change_from_landing": "landing on default branch (commit date for backports) to final release (per change)",
     "change_from_first_commit": "first commit of the change to final release (per change)",
     "landing_is_deploy": "first commit to landing, if landing is the deploy (per change)",
 }

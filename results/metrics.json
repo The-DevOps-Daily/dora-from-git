@@ -1,136 +1,14 @@
 {
-  "generated_at": "2026-10-14T12:53:57+00:00",
-  "extract_code_hash": "bc4746170d6ebaa0",
-  "metrics_code_hash": "db735e108ef3307f",
+  "generated_at": "2026-10-14T13:00:12+00:00",
+  "extract_code_hash": "8c149e2efb508581",
+  "metrics_code_hash": "e46183eea20f7f65",
   "hotfix_days": 7,
   "repos": [
-    {
-      "repo": "go",
-      "merge_style": "rebase (Gerrit, linear)",
-      "head": "e60b4c37fa344513cdecfffe6efc3ca48c4a6cb2",
-      "code_hash": "bc4746170d6ebaa0",
-      "weeks": 52.14,
-      "deployment_frequency": {
-        "every_tag": {
-          "count": 36,
-          "per_week": 0.6904
-        },
-        "final_tags": {
-          "count": 30,
-          "per_week": 0.5753
-        },
-        "release_days": {
-          "count": 15,
-          "per_week": 0.2877
-        },
-        "default_branch_landings": {
-          "count": 3422,
-          "per_week": 65.6274
-        }
-      },
-      "lead_time": {
-        "commit_author_date_first_tag": {
-          "n": 3878,
-          "median_h": 1657.6,
-          "p75_h": 2828.74
-        },
-        "commit_author_date": {
-          "n": 3878,
-          "median_h": 3061.19,
-          "p75_h": 4204.18
-        },
-        "commit_committer_date": {
-          "n": 3878,
-          "median_h": 2687.18,
-          "p75_h": 3817.26
-        },
-        "commit_author_date_without_backports": {
-          "n": 3415,
-          "median_h": 3312.87,
-          "p75_h": 4386.93
-        },
-        "change_from_landing": {
-          "n": 3521,
-          "median_h": 2639.48,
-          "p75_h": 3688.76
-        },
-        "change_from_first_commit": {
-          "n": 3521,
-          "median_h": 3008.21,
-          "p75_h": 4137.63
-        },
-        "landing_is_deploy": {
-          "n": 3422,
-          "median_h": 99.12,
-          "p75_h": 360.08
-        }
-      },
-      "landing_is_deploy_by_style": {
-        "merge_commit_landings": {
-          "n": 8,
-          "median_h": 552.36,
-          "p75_h": 1750.31
-        },
-        "single_commit_landings": {
-          "n": 3414,
-          "median_h": 98.96,
-          "p75_h": 358.75
-        },
-        "single_commit_landings_author_within_60s_of_committer": 0
-      },
-      "backport_commits": 463,
-      "change_failure_rate": {
-        "hotfix_within_7_days": {
-          "failed": 4,
-          "of": 30,
-          "rate": 0.133
-        },
-        "ships_a_revert": {
-          "failed": 2,
-          "of": 30,
-          "rate": 0.067
-        },
-        "shipped_change_later_reverted": {
-          "failed": 1,
-          "of": 30,
-          "rate": 0.033,
-          "reverts_unresolved_by_parser": 0,
-          "reverts_of_unreleased_or_older_changes": 38
-        }
-      },
-      "recovery_time": {
-        "hotfix_within_7_days": {
-          "n": 4,
-          "median_h": 144.13,
-          "p75_h": 146.95
-        },
-        "shipped_change_later_reverted": {
-          "n": 1,
-          "median_h": 4557.29,
-          "p75_h": 4557.29
-        }
-      },
-      "details": {
-        "hotfix_failed": [
-          "go1.25.2",
-          "go1.24.8",
-          "go1.26.6",
-          "go1.25.13"
-        ],
-        "ships_a_revert": [
-          "go1.26.0",
-          "go1.27.0"
-        ],
-        "reverted": {
-          "go1.26.0": "go1.27.0"
-        }
-      }
-    },
     {
       "repo": "kubernetes",
       "merge_style": "merge commits",
       "head": "25952278995376c9b6d7e345d1f45c41b2099546",
-      "code_hash": "bc4746170d6ebaa0",
+      "code_hash": "8c149e2efb508581",
       "weeks": 52.14,
       "deployment_frequency": {
         "every_tag": {
@@ -246,138 +124,10 @@
       }
     },
     {
-      "repo": "prometheus",
-      "merge_style": "mixed: merge commits and squash",
-      "head": "6f01fa9c5ffcbe71a5ed9e4132d9bb60c4aae85a",
-      "code_hash": "bc4746170d6ebaa0",
-      "weeks": 52.14,
-      "deployment_frequency": {
-        "every_tag": {
-          "count": 39,
-          "per_week": 0.7479
-        },
-        "final_tags": {
-          "count": 26,
-          "per_week": 0.4986
-        },
-        "release_days": {
-          "count": 24,
-          "per_week": 0.4603
-        },
-        "default_branch_landings": {
-          "count": 1241,
-          "per_week": 23.8
-        }
-      },
-      "lead_time": {
-        "commit_author_date_first_tag": {
-          "n": 1936,
-          "median_h": 766.1,
-          "p75_h": 1087.81
-        },
-        "commit_author_date": {
-          "n": 1936,
-          "median_h": 960.73,
-          "p75_h": 1298.57
-        },
-        "commit_committer_date": {
-          "n": 1936,
-          "median_h": 935.53,
-          "p75_h": 1217.11
-        },
-        "commit_author_date_without_backports": {
-          "n": 1889,
-          "median_h": 971.32,
-          "p75_h": 1301.82
-        },
-        "change_from_landing": {
-          "n": 1305,
-          "median_h": 873.43,
-          "p75_h": 1131.23
-        },
-        "change_from_first_commit": {
-          "n": 1305,
-          "median_h": 949.68,
-          "p75_h": 1232.39
-        },
-        "landing_is_deploy": {
-          "n": 1241,
-          "median_h": 0.34,
-          "p75_h": 48.7
-        }
-      },
-      "landing_is_deploy_by_style": {
-        "merge_commit_landings": {
-          "n": 626,
-          "median_h": 48.2,
-          "p75_h": 229.02
-        },
-        "single_commit_landings": {
-          "n": 615,
-          "median_h": 0.0,
-          "p75_h": 0.0
-        },
-        "single_commit_landings_author_within_60s_of_committer": 612
-      },
-      "backport_commits": 47,
-      "change_failure_rate": {
-        "hotfix_within_7_days": {
-          "failed": 5,
-          "of": 26,
-          "rate": 0.192
-        },
-        "ships_a_revert": {
-          "failed": 7,
-          "of": 26,
-          "rate": 0.269
-        },
-        "shipped_change_later_reverted": {
-          "failed": 1,
-          "of": 26,
-          "rate": 0.038,
-          "reverts_unresolved_by_parser": 3,
-          "reverts_of_unreleased_or_older_changes": 5
-        }
-      },
-      "recovery_time": {
-        "hotfix_within_7_days": {
-          "n": 5,
-          "median_h": 124.56,
-          "p75_h": 126.15
-        },
-        "shipped_change_later_reverted": {
-          "n": 1,
-          "median_h": 357.13,
-          "p75_h": 357.13
-        }
-      },
-      "details": {
-        "hotfix_failed": [
-          "v3.7.0",
-          "v3.7.1",
-          "v3.9.0",
-          "v3.11.0",
-          "v3.11.1"
-        ],
-        "ships_a_revert": [
-          "v3.7.0",
-          "v3.7.3",
-          "v3.9.0",
-          "v3.10.0",
-          "v3.11.0",
-          "v3.12.0",
-          "v3.13.0"
-        ],
-        "reverted": {
-          "v3.7.0": "v3.7.3"
-        }
-      }
-    },
-    {
       "repo": "uv",
       "merge_style": "squash",
       "head": "a79aac95dc8f1d79e4396fdcb262d22c520cc1f6",
-      "code_hash": "bc4746170d6ebaa0",
+      "code_hash": "8c149e2efb508581",
       "weeks": 52.14,
       "deployment_frequency": {
         "every_tag": {
@@ -597,6 +347,256 @@
           "0.9.15": "0.9.16",
           "0.10.3": "0.10.4",
           "0.11.22": "0.11.23"
+        }
+      }
+    },
+    {
+      "repo": "go",
+      "merge_style": "rebase (Gerrit, linear)",
+      "head": "e60b4c37fa344513cdecfffe6efc3ca48c4a6cb2",
+      "code_hash": "8c149e2efb508581",
+      "weeks": 52.14,
+      "deployment_frequency": {
+        "every_tag": {
+          "count": 36,
+          "per_week": 0.6904
+        },
+        "final_tags": {
+          "count": 30,
+          "per_week": 0.5753
+        },
+        "release_days": {
+          "count": 15,
+          "per_week": 0.2877
+        },
+        "default_branch_landings": {
+          "count": 3422,
+          "per_week": 65.6274
+        }
+      },
+      "lead_time": {
+        "commit_author_date_first_tag": {
+          "n": 3878,
+          "median_h": 1657.6,
+          "p75_h": 2828.74
+        },
+        "commit_author_date": {
+          "n": 3878,
+          "median_h": 3061.19,
+          "p75_h": 4204.18
+        },
+        "commit_committer_date": {
+          "n": 3878,
+          "median_h": 2687.18,
+          "p75_h": 3817.26
+        },
+        "commit_author_date_without_backports": {
+          "n": 3415,
+          "median_h": 3312.87,
+          "p75_h": 4386.93
+        },
+        "change_from_landing": {
+          "n": 3521,
+          "median_h": 2639.48,
+          "p75_h": 3688.76
+        },
+        "change_from_first_commit": {
+          "n": 3521,
+          "median_h": 3008.21,
+          "p75_h": 4137.63
+        },
+        "landing_is_deploy": {
+          "n": 3422,
+          "median_h": 99.12,
+          "p75_h": 360.08
+        }
+      },
+      "landing_is_deploy_by_style": {
+        "merge_commit_landings": {
+          "n": 8,
+          "median_h": 552.36,
+          "p75_h": 1750.31
+        },
+        "single_commit_landings": {
+          "n": 3414,
+          "median_h": 98.96,
+          "p75_h": 358.75
+        },
+        "single_commit_landings_author_within_60s_of_committer": 0
+      },
+      "backport_commits": 463,
+      "change_failure_rate": {
+        "hotfix_within_7_days": {
+          "failed": 4,
+          "of": 30,
+          "rate": 0.133
+        },
+        "ships_a_revert": {
+          "failed": 2,
+          "of": 30,
+          "rate": 0.067
+        },
+        "shipped_change_later_reverted": {
+          "failed": 1,
+          "of": 30,
+          "rate": 0.033,
+          "reverts_unresolved_by_parser": 0,
+          "reverts_of_unreleased_or_older_changes": 38
+        }
+      },
+      "recovery_time": {
+        "hotfix_within_7_days": {
+          "n": 4,
+          "median_h": 144.13,
+          "p75_h": 146.95
+        },
+        "shipped_change_later_reverted": {
+          "n": 1,
+          "median_h": 4557.29,
+          "p75_h": 4557.29
+        }
+      },
+      "details": {
+        "hotfix_failed": [
+          "go1.25.2",
+          "go1.24.8",
+          "go1.26.6",
+          "go1.25.13"
+        ],
+        "ships_a_revert": [
+          "go1.26.0",
+          "go1.27.0"
+        ],
+        "reverted": {
+          "go1.26.0": "go1.27.0"
+        }
+      }
+    },
+    {
+      "repo": "prometheus",
+      "merge_style": "mixed: merge commits and squash",
+      "head": "6f01fa9c5ffcbe71a5ed9e4132d9bb60c4aae85a",
+      "code_hash": "8c149e2efb508581",
+      "weeks": 52.14,
+      "deployment_frequency": {
+        "every_tag": {
+          "count": 39,
+          "per_week": 0.7479
+        },
+        "final_tags": {
+          "count": 26,
+          "per_week": 0.4986
+        },
+        "release_days": {
+          "count": 24,
+          "per_week": 0.4603
+        },
+        "default_branch_landings": {
+          "count": 1241,
+          "per_week": 23.8
+        }
+      },
+      "lead_time": {
+        "commit_author_date_first_tag": {
+          "n": 1936,
+          "median_h": 766.1,
+          "p75_h": 1087.81
+        },
+        "commit_author_date": {
+          "n": 1936,
+          "median_h": 960.73,
+          "p75_h": 1298.57
+        },
+        "commit_committer_date": {
+          "n": 1936,
+          "median_h": 935.53,
+          "p75_h": 1217.11
+        },
+        "commit_author_date_without_backports": {
+          "n": 1889,
+          "median_h": 971.32,
+          "p75_h": 1301.82
+        },
+        "change_from_landing": {
+          "n": 1305,
+          "median_h": 873.43,
+          "p75_h": 1131.23
+        },
+        "change_from_first_commit": {
+          "n": 1305,
+          "median_h": 949.68,
+          "p75_h": 1232.39
+        },
+        "landing_is_deploy": {
+          "n": 1241,
+          "median_h": 0.34,
+          "p75_h": 48.7
+        }
+      },
+      "landing_is_deploy_by_style": {
+        "merge_commit_landings": {
+          "n": 626,
+          "median_h": 48.2,
+          "p75_h": 229.02
+        },
+        "single_commit_landings": {
+          "n": 615,
+          "median_h": 0.0,
+          "p75_h": 0.0
+        },
+        "single_commit_landings_author_within_60s_of_committer": 612
+      },
+      "backport_commits": 47,
+      "change_failure_rate": {
+        "hotfix_within_7_days": {
+          "failed": 5,
+          "of": 26,
+          "rate": 0.192
+        },
+        "ships_a_revert": {
+          "failed": 7,
+          "of": 26,
+          "rate": 0.269
+        },
+        "shipped_change_later_reverted": {
+          "failed": 1,
+          "of": 26,
+          "rate": 0.038,
+          "reverts_unresolved_by_parser": 3,
+          "reverts_of_unreleased_or_older_changes": 5
+        }
+      },
+      "recovery_time": {
+        "hotfix_within_7_days": {
+          "n": 5,
+          "median_h": 124.56,
+          "p75_h": 126.15
+        },
+        "shipped_change_later_reverted": {
+          "n": 1,
+          "median_h": 357.13,
+          "p75_h": 357.13
+        }
+      },
+      "details": {
+        "hotfix_failed": [
+          "v3.7.0",
+          "v3.7.1",
+          "v3.9.0",
+          "v3.11.0",
+          "v3.11.1"
+        ],
+        "ships_a_revert": [
+          "v3.7.0",
+          "v3.7.3",
+          "v3.9.0",
+          "v3.10.0",
+          "v3.11.0",
+          "v3.12.0",
+          "v3.13.0"
+        ],
+        "reverted": {
+          "v3.7.0": "v3.7.3"
         }
       }
     }

@@ -222,8 +222,9 @@ def metrics_for(ex):
 def main():
     results = []
     hashes = set()
-    for path in sorted(EXTRACT.glob("*.json.gz")):
-        with gzip.open(path, "rt") as f:
+    configured = [r["name"] for r in json.loads((ROOT / "repos.json").read_text())["repos"]]
+    for name in configured:
+        with gzip.open(EXTRACT / f"{name}.json.gz", "rt") as f:
             ex = json.load(f)
         hashes.add(ex["code_hash"])
         results.append(metrics_for(ex))
